@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <!-- Add your CSS styles here -->
+<style>
+  body {
+    background-color: lightorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   margin: 0;
+ }
+ .container {
+   text-align: center;
+   max-width: 900px;
+   padding: 20px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ .banner {
+   background-color: orange;
+   color: black;
+   font-size: 45px;
+   padding: 20px;
+ }
+ .input-field {
+   width: 300px;
+   height: 25px;
+   margin: 10px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+ }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+</style>
+<script>
+function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    return crypto.subtle.digest('SHA-256', data)
+        .then(hashBuffer => {
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        });
+}
+async function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Hash the password
+    const hashedPassword = await hashPassword(password);
+
+    // Compare with stored password (e.g., 'admin')
+    // Go to https://www.onlinewebtoolkit.com/hash-generator# to create a hash string for your secret password
+    if (hashedPassword === 'e36c4ea7b423c8e8b15383ff5395c7bbe89c53e35c3ed97701390137be31a892' && username === 'admin') {
+        // Successful login, redirect to main.html
+        window.location.href = "main.html";
+    } else {
+        alert('Invalid credentials. Please try again.');
+    }
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="banner">
+      WEBSITE MAINTENANCE<br>Please request login credentials from the ROADHOUSEBAND online security authority
+    </div>
+    <form id="loginForm">
+        <label for="Username">Username:</label>
+        <input type="text" class="input-field" id="username" required>
+        <br>
+        <label for="Password">Password:</label>
+        <input type="password" class="input-field" id="password" required>
+        <br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+  </div>
+  <div class="footer">
+  © 2024 Big Black Box Productions. All rights reserved.
+  </div>
+</body>
+</html>
