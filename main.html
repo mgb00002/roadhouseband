@@ -6,9 +6,10 @@
 <title>ROADHOUSEBAND</title>
 <style>
   body {
-    background: url('Wallpaper4_bw_fade.png') no-repeat center center fixed;
+    background: url('Wallpaper4_wb_fade.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: Times;
+    colour: white;
   }
   .banner {
    display: block;
@@ -27,15 +28,26 @@
    width: 50%;
    text-align: center;
    margin: 20px auto;
-   width: 900px;
-   height: 450px;
-   border: 15px solid #f20824;
+   width: 720px;
+   height: 542px;
+   border: 15px solid #B69074;
    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3);
   }
-  .bio {
-    text-align: center;
-    margin: 20px;
-    font-size: 20px;
+  .bio_1 {
+    width: 20em;         /* Set a definitive width */
+    font-size: 2.0em;    /* Use ems for better cross-system consistency */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify; /* Keep the text left-justified */
+    color: white;
+  }  
+  .bio_2 {
+    width: 20em;         /* Set a definitive width */
+    font-size: 2.0em;    /* Use ems for better cross-system consistency */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify; /* Keep the text left-justified */
+    color: white;
   }
   .email {
     text-align: center;
@@ -46,6 +58,7 @@
     text-align: center;
     padding: 30px;
     font-size: 36px;
+    color: white;
   }
   .videos {
     text-align: center;
@@ -54,34 +67,49 @@
   }
   .video-thumbnails {
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
     margin-bottom: 20px;
-    width: 50%;
+    /* width: 25%; */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* place-self: center; */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 5px;
   }
   .thumbnail {
     width: 145px;
     height: 145px;
-    border: 5px solid #f20824;
+    border: 5px solid #B69074;
     padding: 20px;
     text-align: center;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   }
+  .speech {
+    position: relative;
+    top: 5px; /* Adjust the position as needed */
+    left: 5px; /* Adjust the position as needed */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+  }
+  .thumbnail:hover .speech {
+    display: block; /* Show the speech bubble on hover */
+  }
   .container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   height: 17vh; /* Full height of the viewport */
+    width: 20em;         /* Set a definitive width */
+    font-size: 2.0em;    /* Use ems for better cross-system consistency */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify; /* Keep the text left-justified */
   }
   .icon-text {
    display: flex;
    font-size: 30px;
    align-items: center;
    margin-bottom: 20px;
+   color: #B69074;
   }
   .icon {
    margin-right: 10px;
@@ -89,6 +117,7 @@
    width: 36px; /* Width of the icon */
    height: 36px; /* Height of the icon */
    background-size: cover;
+   color: #B69074;
   }
   .social-box {
     width: 1200px;
@@ -97,7 +126,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
-    border: 5px solid #f20824;
+    border: 5px solid #B69074;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
     padding: 10px;
     box-sizing: border-box;
@@ -121,85 +150,95 @@
     text-align: center;
     padding: 10px;
   }
+  a {
+    color: #ffffff;   /* Default link color (white) */
+  }
+  a:visited {
+    color: #d3d3d3;   /* Visited link color (light gray) */
+  }
+  #wrapper {
+    width: 1000px;           /* Adjust as needed */
+    margin: 0 auto;
+  }
 </style>
 </head>
 <body>
   <div class="banner">
     <!-- Banner image goes here -->
-    <img src="roadhouse_red_banner.png" alt="Band Banner" width="900" height="250">
+    <img src="roadhouse_brown_banner.png" alt="Band Banner" width="900" height="200">
   </div>
-  <div class="band-photo">
+  <div class="bio_1">
+    <p>Roadhouse are a roots rock band from Wellington. We play a range of rootsy music from the genres of rock, blues, country, folk, R&B, rockabilly and the great American songbook.</p>
+  </div>
+   <div class="band-photo">
     <!-- Band photo goes here -->
-    <img src="bandphoto.png" alt="Band Photo" width="900" height="450">
+    <img src="band_photo_colour.jpg" alt="Band Photo" width="720" height="542">
   </div>
-  <div class="bio">
-    <!-- Bio goes here -->
-    <p><b>Roadhouse are a roots rock and roots music band based in the Wellington region. <br>They bring a mix of well-known and lesser known rock, folk, blues, country, classic<br>R&B, folk, rockabilly, and other songs from the great American songbook to the stage. <br>Their current repertoire spans quite a few decades; currently the 1930s to the 1990s.</b></p>
-    <p style="color: rgb(255, 0, 0);">
+  <div class="bio_2">
+    <p>Many of the songs we cover are from the '50s to the '90s, but our full repertoire spans more than 100 years of music.<br><br>Whether your event or venue calls for popular classics, interesting roots music, ora mix, we can put together a set to fit your needs. It can be also be all-electric, all-acoustic or both.<br><br>We're open to travelling outside the Wellington area.</p>
+    <p style="color: rgb(182, 144, 116;)">
       <b>Email: 
-          <a href="mailto:roadhouseband2024@gmail.com">roadhouseband2024@gmail.com </a>
+          <a href="mailto:roadhouseband2024@gmail.com">roadhouseband2024@gmail.com</a>
       </b>
     </p>
   </div>
   <div class="events">
-    <p style="color: rgb(255, 0, 0);"><b>News and Events:</b></p>
+    <p style="color: rgb(182, 144, 116);"><b>News and Events:</b></p>
   </div>
   <div class="container">
-
      <div class="icon-text">
        <div class="icon"></div>
-         <div>Sun 28 Jul - <a target="_blank" rel="noopener noreferrer" href="https://www.eventfinda.co.nz/2024/jimmy-barnes-wellington-hell-of-time-tour/wellington">Hell of a Time Tour</a>
+         <div>Upcoming in June - <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MadisonsFirstSt/">Madison's Bar</a>
          </div>
        </div>
-
-     <div class="icon-text">
-       <div class="icon"></div>
-         <div>Upcoming in June - <a target="_blank" rel="noopener noreferrer" href="https://myrockshows.com/place/28796-meow/">Appearing at Meow</a>
-         </div>
-     </div>
-
-     <div class="icon-text">
-       <div class="icon"></div>
-         <div>Upcoming in July - <a target="_blank" rel="noopener noreferrer" href="https://www.undercurrent.nz/about">Appearing at the Undercurrent</a>
-         </div>
-     </div>
-
-     <div class="icon-text">
-       <div class="icon"></div>
-         <div>Upcoming in August - <a target="_blank" rel="noopener noreferrer" href="https://www.sanfran.co.nz/">Appearing at SanFran</a>
-         </div>
-     </div>
-
      </div>
   <div class="videos">
-    <p style="color: rgb(255, 0, 0);"><b>Check out our videos:</b></p>
+    <p style="color: rgb(182, 144, 116);"><b>Check out our videos:</b></p>
   </div>
+ <div id="wrapper">
   <div class="video-thumbnails">
     <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/-p7YgThojI8"><img src="roadhouse_logo.png" alt="Play Now!"></a>
-      <p><b>Should I Stay?</b></p>
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/vdxg_tBlcdw"><img src="tn_call_jun.png" alt="Play Now!"></a>
+      <p><b>demo</b></p>
+        <div class="speech">Cover of Call Me The Breeze</div>
     </div>
     <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/YYq3Hi-wO8o"><img src="roadhouse_logo.png" alt="Play Now!"></a>
-      <p><b>Blue Suede Shoes</b></p>
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/s6QpFlWBTWE"><img src="tn_rain_jun.png" alt="Play Now!"></a>
+      <p><b>demo</b></p>
+        <div class="speech">Cover of A Hard Rain's a Gonna Fall</div>
     </div>
     <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/UvYvnCReCmA"><img src="roadhouse_logo.png" alt="Play Now!"></a>
-      <p><b>The Breeze</b></p>
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/m7Ha7qg68hk"><img src="tn_going_jun.png" alt="Play Now!"></a>
+      <p><b></b></p>
+        <div class="speech">Cover of Going Down the Road Feeling Bad</div>
     </div>
     <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/EQdZn30QpEw"><img src="roadhouse_logo.png" alt="Play Now!"></a>
-      <p><b>Green River</b></p>
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/kLZSNZffNwk"><img src="tn_green_jun.png" alt="Play Now!"></a>
+      <p><b></b></p>
+        <div class="speech">Cover of Green River</div>
     </div>
     <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/SAiEaBMmsME"><img src="roadhouse_logo.png" alt="Play Now!"></a>
-      <p><b>Johnny B Good</b></p>
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/hjSRrw_ubBI"><img src="tn_blue_jun.png" alt="Play Now!"></a>
+      <p><b></b></p>
+        <div class="speech">Cover of Blue Suede Shoes</div>
     </div>
     <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/Y2tmDloLjFk"><img src="roadhouse_logo.png" alt="Play Now!"></a>
-      <p><b>Roadhouse Blues</b></p>
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/NbiU1fNHiM4"><img src="tn_folsom_jun.png" alt="Play Now!"></a>
+      <p><b></b></p>
+        <div class="speech">Cover of Folsom River Blues</div>
+    </div>
+    <div class="thumbnail">
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/JWXvuWujusU"><img src="tn_johnny_jun.png" alt="Play Now!"></a>
+      <p><b></b></p>
+        <div class="speech">Cover of Johnny B. Goode</div>
+    </div>
+    <div class="thumbnail">
+      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/6YK-RuVrzu8"><img src="tn_madison_jun.png" alt="Play Now!"></a>
+      <p><b></b></p>
+        <div class="speech">Cover of Madison Blues</div>
     </div>
   </div>
+ </div>
   <div class="social-box">
    <a href="https://www.facebook.com" target="_blank"><div class="social-icon" style="background-image: url('facebook-icon.png');"></div></a>
    <a href="https://www.youtube.com" target="_blank"><div class="social-icon" style="background-image: url('youtube-icon.png');"></div></a>
