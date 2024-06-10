@@ -1,4 +1,4 @@
-<!DOCTYPE html>                 /*  V 0.4  6 June 2024 */
+<!DOCTYPE html>                 /*  V 0.5  7 June 2024 */
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -28,8 +28,8 @@
    width: 50%;
    text-align: center;
    margin: 20px auto;
-   width: 720px;
-   height: 542px;
+   width: 650px;
+   height: 535px;
    border: 15px solid #B69074;
    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3);
   }
@@ -49,21 +49,39 @@
     text-align: justify; /* Keep the text left-justified */
     color: white;
   }
-  .email {
-    text-align: center;
-    margin: 20px;
-    font-size: 36px;
-  }
   .events {
     text-align: center;
     padding: 30px;
     font-size: 36px;
     color: white;
+    position: relative;
+  }
+  .events::before {
+    content: ""; /* Create an empty pseudo-element */
+    display: block;
+    /* position: absolute; */
+    top: -7px;  /* Position above the title */
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    height: 7px;
+    background-color: #800020; /* Red color */
   }
   .videos {
     text-align: center;
     padding: 5px;
     font-size: 36px;
+  }
+ .videos::before {
+    content: ""; /* Create an empty pseudo-element */
+    display: block;
+    /* position: absolute; */
+    top: -7px;  /* Position above the title */
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    height: 7px;
+    background-color: #800020; /* Red color */
   }
   .video-thumbnails {
     margin-left: auto;
@@ -144,9 +162,13 @@
 }
 body{
   height: 200vh;
+  margin: 0;
+  padding: 0;
+  border-top: 25px solid #800020;
 }
 .shareit {
   position: fixed;
+  right: 0;
   top: 150px;
 }
 .shareit a {
@@ -179,40 +201,36 @@ body{
 .tumblr {
   background: #000000;
 }
-
 .pinterest {
   background: #cb2027;
 }
 </style>
 </head>
 <body>
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <div class="banner">
     <!-- Banner image goes here -->
     <img src="roadhouse_brown_banner.png" alt="Band Banner" width="900" height="200">
   </div>
   <div class="bio_1">
-    <p>Roadhouse are a roots rock band from Wellington. We play a range of rootsy music from the genres of rock, blues, country, folk, R&B, rockabilly and the great American songbook.</p>
+    <p>We are a roots rock band based on Wellington. We play a range of rootsy music from the genres of rock, blues, country, folk, R&B, rockabilly and the great American songbook.</p>
   </div>
    <div class="band-photo">
     <!-- Band photo goes here -->
-    <img src="band_photo_colour.jpg" alt="Band Photo" width="720" height="542">
+    <img src="band_photo_colour.jpg" alt="Band Photo" width="650" height="535">
   </div>
   <div class="bio_2">
-    <p>Many of the songs we cover are from the '50s to the '90s, but our full repertoire spans more than 100 years of music.<br><br>Whether your event or venue calls for popular classics, interesting roots music, or a mix, we can put together a set to fit your needs. It can be also be all-electric, all-acoustic or both.<br><br>We're open to travelling outside the Wellington area.</p>
-    <p style="color: rgb(182, 144, 116;)">
-      <b>Email: 
-          <a href="mailto:roadhouseband2024@gmail.com">roadhouseband2024@gmail.com</a>
-      </b>
+    <p>Most of the songs we cover are from the '50s to the '90s, but our full repertoire spans nearly 100 years of music. We can play both acoustic and electric music.<br><br>Whether your event or venue wants popular classics, interesting roots music, or a mixture, we can put together a set list to fit your preferences.<br><br>Feel free to get in touch if you have any ideas in mind (we're also open to travelling outside of Wellington.<br><br><b>Email:</b> <a href="mailto:roadhouseband2024@gmail.com">roadhouseband2024@gmail.com</a>
     </p>
   </div>
   <div class="events">
-    <p style="color: rgb(182, 144, 116);"><b>News and Events:</b></p>
+    <p style="color: rgb(182, 144, 116);"><b>News and events:</b></p>
   </div>
   <div class="container">
      <div class="icon-text">
        <div class="icon"></div>
-         <div>Upcoming in June - <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MadisonsFirstSt/">Madison's Bar</a>
+         <div>Appearing soon at <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MadisonsFirstSt/">Madison's Cafe, Landsdowne</a>
          </div>
        </div>
      </div>
@@ -263,6 +281,7 @@ body{
     </div>
   </div>
  </div>
+
     <div class="shareit">
       <!-- facebook -->
       <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://roadhouseband.co.nz" target="blank" title="facebook"><i class="fa fa-facebook"></i></a>
