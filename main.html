@@ -1,4 +1,4 @@
-<!DOCTYPE html>                 /*  V 0.7  14 June 2024 */
+<!DOCTYPE html>                     /*  V 0.8  16 June 2024 */
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,11 +6,7 @@
 <title>ROADHOUSEBAND</title>
 <style>
   html, body {
-    zoom: 0.75;                                /* Not supported in older versions of I.E. */
-    /* transform: scale(0.75);                Chrome, Edge, Safari, Opera, Brave */
-    /* transform-origin: 0 0;  */
-    /* -moz-transform: scale(0.75);          */      /* Firefox */
-    /* -moz-transform-origin: 0 0;           */
+    zoom: 0.75;                             /* Not supported in older versions of I.E. */
   }
   body {
     background: url('Wallpaper4_wb_fade.jpg') no-repeat center center fixed;
@@ -26,7 +22,7 @@
    text-align: center;
    margin-top: 50px;
    width: 900px;
-   height: 250px;    /* box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3); */
+   height: 250px;                           /* box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3); */
   }
   .band-photo {
    display: block;
@@ -41,19 +37,19 @@
    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3);
   }
   .bio_1 {
-    width: 27em;       /*  Set a definitive width */
-    font-size: 1.75em;    /* Use ems for better cross-system consistency */
+    width: 27em;                           /*  Set a definitive width */
+    font-size: 26px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify; /* Keep the text left-justified */
+    text-align: justify;                   /* Keep the text left-justified */
     color: white;
   }  
   .bio_2 {
-    width: 27em;         /* Set a definitive width */
-    font-size: 1.75em;    /* Use ems for better cross-system consistency */
+    width: 27em;                           /* Set a definitive width */
+    font-size: 26px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify; /* Keep the text left-justified */
+    text-align: justify;                   /* Keep the text left-justified */
     color: white;
   }
   .events {
@@ -64,15 +60,15 @@
     position: relative;
   }
   .events::before {
-    content: ""; /* Create an empty pseudo-element */
+    content: "";                           /* Create an empty pseudo-element */
     display: block;
-    /* position: absolute; */
-    top: -7px;  /* Position above the title */
+ /* position: absolute; */
+    top: -7px;                             /* Position above the title */
     margin-left: auto;
     margin-right: auto;
     width: 22em;
     height: 7px;
-    background-color: #800020; /* Red color */
+    background-color: #800020;             /* Red color */
   }
   .videos {
     text-align: center;
@@ -80,15 +76,15 @@
     font-size: 36px;
   }
  .videos::before {
-    content: ""; /* Create an empty pseudo-element */
+    content: "";                           /* Create an empty pseudo-element */
     display: block;
     /* position: absolute; */
-    top: -7px;  /* Position above the title */
+    top: -7px;                             /* Position above the title */
     margin-left: auto;
     margin-right: auto;
     width: 22em;
     height: 7px;
-    background-color: #800020; /* Red color */
+    background-color: #800020;             /* Red color */
   }
   .video-thumbnails {
     margin-left: auto;
@@ -111,27 +107,28 @@
   }
   .speech {
     position: relative;
-    top: -255px; /* Adjust the position as needed */
-    left: 5px; /* Adjust the position as needed */
+    font-size: 18px;
+    top: -255px;                           /* Adjust the position as needed */
+    left: 5px;                             /* Adjust the position as needed */
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     padding: 25px;
     border-radius: 5px;
-    display: none; /* Initially hidden */
+    display: none;                         /* Initially hidden */
   }
   .thumbnail:hover .speech {
-    display: block; /* Show the speech bubble on hover */
+    display: block;                        /* Show the speech bubble on hover */
   }
   .container {
-    width: 20em;         /* Set a definitive width */
-    font-size: 2.5em;    /* Use ems for better cross-system consistency */
+    width: 27em;                           /* Set a definitive width */
+    width:  725px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify; /* Keep the text left-justified */
+   text-align: justify;                    /* Keep the text left-justified */
   }
   .icon-text {
    display: flex;
-   font-size: 30px;
+   font-size: 26px;
    align-items: center;
    margin-bottom: 20px;
    color: #B69074;
@@ -139,8 +136,8 @@
   .icon {
    margin-right: 10px;
    background-image: url('tick.png');
-   width: 36px; /* Width of the icon */
-   height: 36px; /* Height of the icon */
+   width: 36px;                             /* Width of the icon */
+   height: 36px;                            /* Height of the icon */
    background-size: cover;
    color: #B69074;
   }
@@ -152,16 +149,17 @@
     background-color: #333;
     color: white;
     text-align: center;
+    font-size: 15px;
     padding: 10px;
   }
   a {
-    color: #ffffff;   /* Default link color (white) */
+    color: #ffffff;                         /* Default link color (white) */
   }
   a:visited {
-    color: #d3d3d3;   /* Visited link color (light gray) */
+    color: #d3d3d3;                         /* Visited link color (light gray) */
   }
   #wrapper {
-    width: 900px;           /* Adjust as needed */
+    width: 900px;                           /* Adjust as needed */
     margin: 0 auto;
   }
 *{
