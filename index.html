@@ -40,7 +40,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #333; 
     color: white;
     text-align: center;
     padding: 10px;
@@ -66,9 +66,9 @@ async function login() {
 
     // Compare with stored password (e.g., 'admin')
     // Go to https://www.onlinewebtoolkit.com/hash-generator# to create a hash string for your secret password
-    if (hashedPassword === 'e36c4ea7b423c8e8b15383ff5395c7bbe89c53e35c3ed97701390137be31a892' && username === 'admin') {
+    if (hashedPassword === '667dbab8b59295680ff736b78f15ed2175b07c614c50ab43875791b7be7e46cc' && username === 'admin') {
         // Successful login, redirect to main.html
-        window.location.href = 'main.html';
+        window.location.href = "main.html";
     } else {
         alert('Invalid credentials. Please try again.');
     }
