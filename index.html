@@ -1,349 +1,96 @@
-<!DOCTYPE html>                     /*  V 1.0 Site launch  22 June 2024 */
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROADHOUSEBAND</title>
+    <title>Login Page</title>
+    <!-- Add your CSS styles here -->
 <style>
-  @media screen and (max-width:1600px) {
-      html, body {
-            zoom: 0.85;                    /* Not supported in older versions of I.E. */
-      }
-  }
-  @media screen and (max-width:1400px) {
-      html, body {
-            zoom: 0.75;                    /* Not supported in older versions of I.E. */
-      }
-  }
-  @media screen and (max-width:500px) {
-      html, body {
-            zoom: 0.65;                    /* Not supported in older versions of I.E. */
-      }
-  }
   body {
-    background: url('Wallpaper4_wb_fade.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Times;
-    colour: white;
-  }
-  .banner {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%;
+    background-color: lightorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   margin: 0;
+ }
+ .container {
    text-align: center;
-   margin-top: 50px;
-   width: 900px;
-   height: 207px;                           /* box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3); */
-  }
-  .band-photo {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%;
-   text-align: center;
-   margin: 20px auto;
-   width: 722px;
-   height: 461px;
-   border: 15px solid #B69074;
-   box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3);
-  }
-  .bio_1 {
-    width: 27em;                           /*  Set a definitive width */
-    font-size: 26px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;                   /* Keep the text left-justified */
-    color: white;
-  }  
-  .bio_2 {
-    width: 27em;                           /* Set a definitive width */
-    font-size: 26px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;                   /* Keep the text left-justified */
-    color: white;
-  }
-  .events {
-    text-align: center;
-    padding: 30px;
-    font-size: 36px;
-    color: white;
-    position: relative;
-  }
-  .events::before {
-    content: "";                           /* Create an empty pseudo-element */
-    display: block;
- /* position: absolute; */
-    top: -7px;                             /* Position above the title */
-    margin-left: auto;
-    margin-right: auto;
-    width: 22em;
-    height: 7px;
-    background-color: #800020;             /* Red color */
-  }
-  .videos {
-    text-align: center;
-    padding: 5px;
-    font-size: 36px;
-  }
- .videos::before {
-    content: "";                           /* Create an empty pseudo-element */
-    display: block;
-    /* position: absolute; */
-    top: -7px;                             /* Position above the title */
-    margin-left: auto;
-    margin-right: auto;
-    width: 22em;
-    height: 7px;
-    background-color: #800020;             /* Red color */
-  }
-  .video-thumbnails {
-    margin-left: auto;
-    margin-right: auto; 
-    margin-bottom: 150px;
-    /* width: 25%; */
-    display: grid;
-    /* place-self: center; */
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    padding: 50px;
-  }
-  .thumbnail {
-    width: 145px;
-    height: 145px;
-    border: 5px solid #B69074;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-  }
-  .speech {
-    position: relative;
-    font-size: 18px;
-    top: -255px;                           /* Adjust the position as needed */
-    left: 5px;                             /* Adjust the position as needed */
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 25px;
-    border-radius: 5px;
-    display: none;                         /* Initially hidden */
-  }
-  .thumbnail:hover .speech {
-    display: block;                        /* Show the speech bubble on hover */
-  }
-  .container {
-    width: 27em;                           /* Set a definitive width */
-    width:  725px;
-    margin-left: auto;
-    margin-right: auto;
-   text-align: justify;                    /* Keep the text left-justified */
-  }
-  .icon-text {
-   display: flex;
-   font-size: 26px;
-   align-items: center;
-   margin-bottom: 20px;
-   color: #B69074;
-  }
-  .icon {
-   margin-right: 10px;
-   background-image: url('tick.png');
-   width: 36px;                             /* Width of the icon */
-   height: 36px;                            /* Height of the icon */
-   background-size: cover;
-   color: #B69074;
-  }
+   max-width: 900px;
+   padding: 20px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ .banner {
+   background-color: orange;
+   color: black;
+   font-size: 45px;
+   padding: 20px;
+ }
+ .input-field {
+   width: 300px;
+   height: 25px;
+   margin: 10px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+ }
   .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #333; 
     color: white;
     text-align: center;
-    font-size: 15px;
     padding: 10px;
   }
-  a {
-    color: #ffffff;                         /* Default link color (white) */
-  }
-  a:visited {
-    color: #d3d3d3;                         /* Visited link color (light gray) */
-  }
-  #wrapper {
-    width: 900px;                           /* Adjust as needed */
-    margin: 0 auto;
-  }
-*{
-  margin: 0;
-}
-body{
-  height: 200vh;
-  margin: 0;
-  padding: 0;
-  border-top: 25px solid #800020;
-}
-.shareit {
-  position: fixed;
-  right: 0;
-  top: 350px;
-}
-.shareit a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  color: #fff;
-  opacity: 0.75;
-  transition: opacity 0.15s linear;
-  text-decoration: none;
-}
-.shareit a:hover {
-  opacity: 1;
-}
-.facebook {
-  background: #3b5998;
-}
-.twitter {
-  background: #55acee;
-}
-.linkedin {
-  background: #0077b5;
-}
-.reddit {
-  background: #FF4500;
-}
-.tumblr {
-  background: #000000;
-}
-.pinterest {
-  background: #cb2027;
-}
-.telegram {
-  background: #27A7E7;
-}
 </style>
+<script>
+function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    return crypto.subtle.digest('SHA-256', data)
+        .then(hashBuffer => {
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        });
+}
+async function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Hash the password
+    const hashedPassword = await hashPassword(password);
+
+    // Compare with stored password (e.g., 'admin')
+    // Go to https://www.onlinewebtoolkit.com/hash-generator# to create a hash string for your secret password
+    if (hashedPassword === '667dbab8b59295680ff736b78f15ed2175b07c614c50ab43875791b7be7e46cc' && username === 'admin') {
+        // Successful login, redirect to main.html
+        window.location.href = "main.html";
+    } else {
+        alert('Invalid credentials. Please try again.');
+    }
+}
+</script>
 </head>
 <body>
-  <script>
-    window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-  </script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <div class="banner">
-    <!-- Banner image goes here -->
-    <img src="roadhouse_banner_900x207.png" alt="Band Banner" width="900" height="207">
-  </div>
-  <div class="bio_1">
-    <p>Roadhouse are a roots rock band based in Wellington. We play rock, blues, country, folk, standards, classic R&B and rockabilly.</p>
-  </div>
-   <div class="band-photo">
-    <!-- Band photo goes here -->
-    <img src="band_photo_daniel.jpg" alt="Band Photo" width="722" height="461"> 
-  </div>
-  <div class="bio_2">
-    <p>Most of the songs we cover are from the '50s to the '90s, but our full repertoire spans nearly 100 years of music. We play both acoustic and electric music.<br><br>Whether your event needs popular classics, interesting roots music, or a mix, we can put together a set list to suit those needs.<br><br>Get in touch with us if you have any ideas in mind (we're also open to travelling outside of Wellington).
-<br><br><b>Email:</b> <a href="mailto:roadhouseband2024@gmail.com">roadhouseband2024@gmail.com</a>
-    </p>
-  </div>
-  <div class="events">
-    <p style="color: rgb(182, 144, 116);"><b>News and events:</b></p>
-  </div>
   <div class="container">
-
-       <div class="icon-text">
-       <div class="icon"></div>
-         <div>Appearing in February 2025 at <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MadisonsFirstSt/">Madison's Cafe, Wairarapa</a>
-         </div>
-       </div>
-
-     </div>
-  <div class="videos">
-    <p style="color: rgb(182, 144, 116);"><b>Check out our videos:</b></p>
+    <div class="banner">
+      WEBSITE MAINTENANCE<br>Please request login credentials from the ROADHOUSEBAND online security authority
+    </div>
+    <form id="loginForm">
+        <label for="Username">Username:</label>
+        <input type="text" class="input-field" id="username" required>
+        <br>
+        <label for="Password">Password:</label>
+        <input type="password" class="input-field" id="password" required>
+        <br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
   </div>
- <div id="wrapper">
-  <div class="video-thumbnails">
-      
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/BrajcnuLotA"><img src="tn_stoned_me_oct24.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"And It Stoned Me"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/3anN19GtNAA"><img src="tn_you_got_it_oct24.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"You Got It"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/hjSRrw_ubBI"><img src="tn_blue_jun.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"Blue Suede Shoes"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/s6QpFlWBTWE"><img src="tn_rain_jun.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"A Hard Rain's a-Gonna Fall"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/m7Ha7qg68hk"><img src="tn_going_jun.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"Going Down This Road Feeling Bad"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/2F1tRWukoWI"><img src="tn_green_aug.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"Green River"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/vdxg_tBlcdw"><img src="tn_call_jun.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"Call Me the Breeze"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/NbiU1fNHiM4"><img src="tn_folsom_jun.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"Folsom Prison Blues"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/JWXvuWujusU"><img src="tn_johnny_jun.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"Johnny B. Goode"</div>
-    </div>
-    <div class="thumbnail">
-      <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/6YK-RuVrzu8"><img src="tn_madison_jun.png" alt="Play Now!"></a>
-      <p><b></b></p>
-        <div class="speech">"Madison Blues"</div>
-    </div>
-  </div>
- </div>
-
- <div class="shareit">
-      <!-- facebook -->
-      <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.roadhouseband.co.nz/fb_post_contact_us_blk.jpg" target="blank" title="facebook"><i class="fa fa-facebook"></i></a>
-
-      <!-- twitter -->
-      <a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.roadhouseband.co.nz&text=Roadhouse%20are%20a%20roots%20rock%20band%20based%20in%20Wellington.%20We%20play%20rock%2C%20blues%2C%20country%2C%20folk%2C%20standards%2C%20classic%20R%26B%20and%20rockabilly.%20Contact%20us%3A%20roadhouseband2024%40gmail.com" target="blank" title="twitter"><i class="fa fa-twitter"></i></a>
-
-      <!-- linkedin -->
-      <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.roadhouseband.co.nz/fb_post_contact_us_blk.jpg&title=&summary=Roadhouse are a roots rock band based in Wellington. We play rock, blues, country, folk, standards, classic R&B and rockabilly. Contact us: roadhouseband2024@gmail.com&source=" target="blank" title="linkedin"><i class="fa fa-linkedin"></i></a>
-     
-      <!-- reddit -->
-      <a class="reddit" href="http://www.reddit.com/submit?url=https%3A%2F%2Fwww.roadhouseband.co.nz&title=Roadhouse%20are%20a%20roots%20rock%20band%20based%20in%20Wellington.%20We%20play%20rock%2C%20blues%2C%20country%2C%20folk%2C%20standards%2C%20classic%20R%26B%20and%20rockabilly.%20Contact%20us%3A%20roadhouseband2024%40gmail.com" target="blank" title="reddit"><i class="fa fa-reddit"></i></a>
-
-      <!-- tumblr -->
-      <a class="tumblr" href="https://www.tumblr.com/share/link?url=https://www.roadhouseband.co.nz&name=ROADHOUSE GREAT ROOTS ROCK LIVE MUSIC&description=Roadhouse are a roots rock band from Wellington. We play a range of roots music including rock, blues, country, folk, rhythm and blues and rockabilly. Contact us: roadhouseband2024@gmail.com" target="blank" title="tumblr"><i class="fa fa-tumblr"></i></a>
-
-      <!-- pinterest -->
-      <a class="pinterest" href="https://nz.pinterest.com/pin-builder/?description=Roadhouse+are+a+roots+rock+band+based+in+Wellington.+We+play+rock%2C+blues%2C+country%2C+folk%2C+standards%2C+classic+R%26B+and+rockabilly.+Contact+us%3A+roadhouseband2024%40gmail.com&media=https%3A%2F%2Fwww.roadhouseband.co.nz%2Ffb_post_contact_us_blk.jpg&method=button&url=https%3A%2F%2Fwww.roadhouseband.co.nz" target="blank" title="pinterest"><i class="fa fa-pinterest-p"></i></a>
-     
-     <!-- telegram -->
-     <a class="telegram" href="https://t.me/share/url?url=www.roadhouseband.co.nz&text=Roadhouse%20are%20a%20roots%20rock%20band%20based%20in%20Wellington.%20We%20play%20rock,%20blues,%20country,%20folk,%20standards,%20classic%20R%26B%20and%20rockabilly.%20Contact%20us%3A%20roadhouseband2024%40gmail.com" target="blank" title="telegram"><i class="fa fa-telegram"></i></a>
-     
-    </div>
- <div class="footer">
+  <div class="footer">
   © 2024 Big Black Box Productions. All rights reserved.
   </div>
 </body>
